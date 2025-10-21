@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>メッセージの表示</title>
+    <style>
+        .messages {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .messages li {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .debug {
+            background-color: lightgray;
+        }
+
+        .info {
+            background-color: lightblue;
+        }
+
+        .success {
+            background-color: lightgreen;
+        }
+
+        .warning {
+            background-color: yellow;
+        }
+
+        .error {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>メッセージの表示</h1>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
