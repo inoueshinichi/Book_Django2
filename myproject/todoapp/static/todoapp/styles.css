@@ -1,3 +1,4 @@
+/* ===== 全体のスタイルを設定 ===== */
 body {
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f7fa;
@@ -7,6 +8,8 @@ body {
     padding: 0;
 }
 
+
+/* ===== コンテナのスタイル ===== */
 .container {
     max-width: 800px;
     margin: 40px auto 0;
@@ -16,6 +19,8 @@ body {
     border-radius: 8px;
 }
 
+
+/* ===== 見出しのスタイル ===== */
 h1 {
     color: #3498db;
     text-align: center;
@@ -25,6 +30,8 @@ h1 {
     letter-spacing: 1px;
 }
 
+
+/* ===== ToDo項目のステータスのスタイル ===== */
 .todo-status {
     font-weight: 500;
     padding: 5px 10px;
@@ -46,9 +53,201 @@ h1 {
     color: white;
 }
 
+
+/* ===== ToDo項目の作成・更新日のスタイル ===== */
 .todo-date {
     font-size: 0.8em;
     color: #7f8c8d;
     margin-top: 10px;
     font-style: italic;
 }
+
+
+/* ===== ボタンのスタイル ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #3498db;
+}
+
+.btn-info {
+    background-color: #3498db;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== ToDo項目のアクションボタンのコンテナスタイル ===== */
+.todo-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todo-actions .btn {
+    margin-left: 10px;
+}
+
+
+/* ===== メッセージ表示セクションのスタイル ===== */
+.messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideIn 0.5s ease-out;
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.success::before {
+    font-family: "Font Awesome 6 Free";
+    content: '\f05a';
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.message .close-btn {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.message .close-btn:hover {
+    opacity: 1;
+}
+
+/* ===== ページネーションのスタイル ===== */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagination a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .current-page {
+    color: #34495e;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #bdc3c7;
+    text-transform: uppercase;
+}
+
+.pagination .disabled {
+    color: #bdc3c7;
+    cursor: default;
+    background-color: #e0e0e0;
+    border: 1px solid #d3d3d3;
+}
+
+/* ===== 分析ページのスタイル ===== */
+.analytics-summary {
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.analytics-charts {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-charts img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
